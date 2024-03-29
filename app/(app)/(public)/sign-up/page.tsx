@@ -1,14 +1,29 @@
 "use client"
 import { useState } from "react";
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { useRouter } from 'next/navigation'
 
 const SinUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const router = useRouter()
+    const supabase = createClientComponentClient()
 
+    const handleSignUp = async () => {
+        console.log('sign up')
+        console.log('location origin : ' + location.origin)
+        await supabase.auth.signUp({
+          email,
+            password,
+            options: {
+              emailRedirectTo: `${location.origin}/callback`,
+            },
+        })
+        setEmail('')
+        setPassword('')
+        router.refresh()
+  }
 
-    const handleSinUp = () => { 
-        console.log('click login');
-    }
 
 
     return (
@@ -29,7 +44,7 @@ const SinUp = () => {
                     className="w-full mb-8 p-3 rounded-md bg-violet-400 text-white placeholder-white"
                 />
                 <button
-                    onClick={handleSinUp}
+                    onClick={handleSignUp}
                     className="w-full bg-violet-600 text-white p-2 rounded mt-2"
                 >Sign in</button>
             </div>

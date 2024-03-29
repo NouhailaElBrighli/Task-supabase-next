@@ -1,0 +1,75 @@
+# Supabase + Next.js Developer Interview Task
+
+Thank you for applying for this position. 
+
+We have a task prepared for you, that you must complete using Next.js, Supabase, and TypeScript. 3days
+
+Feel free to use anything that can help you complete this (except the help of another human).
+
+- The public URL to your GitHub repository
+- The login credentials for the account on supabase.com, which has the database
+- The preview URL for the project hosted on Vercel.
+- The login credentials for both of the users in the application
+
+This is the prerequisite to be *invited to the interview*. 
+
+## The Task
+
+Create a dashboard for a business listing management platform. The application will have multiple users who will create and manage the businesses. 
+
+The dashboard should have the following pages:
+
+- An index page listing every business from the database. The following data should be shown on the index page for every business: the name of the business, the email address of the user who created the business, and the date when the business was created.
+- A page to create a new business. The page should contain a form with an input field for the name of the business. There should be a save, and a cancel button on the page. The save button should redirect the user to the index page if the action was successful. Show a toast message if there was an error.
+- A page to edit an existing business. The page should contain a form with an input field for the name of the business. There should be a save, a cancel, and a delete button on the page. The delete and the save buttons should redirect the user to the index page if the action was successful. Show a toast message if there was an error.
+
+The application should have at least two users in the database.
+
+Every user can see all the businesses, but they can edit or delete only the ones they created. Create RLS policies for this.
+
+We expect to see solutions that utilize Next.js’ server-side features.
+
+Create simple pages for authentication too.
+
+## Technologies
+
+You must use Next.js with TypeScript. Use the app directory of Next.js.
+
+Create a Supabase project, which is connected to the application.
+
+Your application should be hosted on Vercel.
+
+We have prepared a starter repository template for this interview task. Create your project on Github based on this template and use the utilities inside the lib folder. Here's the link for the repository: https://github.com/a-str-o/Supabase-Next.js
+
+## The evaluation
+
+Your application should be implemented according to the requirements, and it should work without bugs.
+
+The visual design will not matter when we evaluate your solution. Just create a user-friendly layout, and you are good to go.
+
+However, we will score your solution based on the architectural design, code quality, and type safety.
+
+Have fun with the task! 🤜 💯
+
+
+.env.local
+
+NEXT_PUBLIC_ORIGIN=http://localhost:3000
+
+NEXT_PUBLIC_SUPABASE_PROJECT_ID=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+# DATABASE_URL=
+
+# STRIPE_API_KEY=
+# STRIPE_WEBHOOK_SIGNING_SECRET=
+
+# NEXT_PUBLIC_GA_MEASUREMENT_ID=
+# GA_CLIENT_EMAIL=
+# GA_PRIVATE_KEY=
+
+# SUPABASE_STAGING_PROJECT_ID=
+# SUPABASE_STAGING_DB_PASSWORD=
+# SUPABASE_PRODUCTION_PROJECT_ID=
+# SUPABASE_PRODUCTION_DB_PASSWORD=
